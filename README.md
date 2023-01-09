@@ -1,4 +1,4 @@
-# PostgreSQL with repmgr - High Availability Cluster
+# PostgreSQL with repmgr - High Availability Setup
 
 _postgres [14.6] and repmgr [5.3.3] with 3 linux machine | choose higher version if you like_
 
