@@ -1,0 +1,22 @@
+version: "3"
+services:
+  p1:
+    container_name: "p1"
+    image: postgres:14
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "8001:5432"
+    hostname: "hostname1"
+    volumes:
+      - "./data/postgres1:/var/lib/postgresql/data"
+  p2:
+    container_name: "p2"
+    image: postgres:14
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "8002:5432"
+    hostname: "hostname2"
+    volumes:
+      - "./data/postgres2:/var/lib/postgresql/data"
