@@ -207,6 +207,7 @@ max_wal_senders = 10
 wal_keep_size = 1024
 shared_preload_libraries = 'repmgr'         # 'timescaledb,repmgr' - if installed
 max_connections=1000
+listen_addresses='*'
 ```
 
 _Modify or add below lines in pg_hba.conf, these line mainly for repmgr user_
@@ -244,7 +245,7 @@ _Here we refering hostname1 machine as primary node_
 
 _We need to modify [repmgr configuration file](https://repmgr.org/docs/5.3/quickstart-repmgr-conf.html), each line exists at different place in file_
 
-_[linux]: vi /etc/repmgr/14/repmgr.conf_
+_[linux]: sudo vi /etc/repmgr/14/repmgr.conf_
 
 ```
 node_id=1
@@ -278,7 +279,7 @@ _Here we refering hostname2 and hostname3 machine as secondary node_
 
 _We need to modify [repmgr configuration file](https://repmgr.org/docs/5.3/quickstart-repmgr-conf.html), each line exists at different place in file_
 
-_[linux]: vi /etc/repmgr/14/repmgr.conf_
+_[linux]: sudo vi /etc/repmgr/14/repmgr.conf_
 
 ```
 node_id=2                                                               # change -> 3 for hostname3
