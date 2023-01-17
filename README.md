@@ -369,3 +369,12 @@ _This command will be executed in standby server only_
 ```
 /usr/pgsql-14/bin/repmgr -v standby follow
 ```
+
+#### D. How to update bash_profile for postgres
+
+_[linux]: sudo vi /var/lib/pgsql/.pgsql_profile_
+
+```
+PATH=$PATH:/usr/pgsql-14/bin
+export PATH
+```
